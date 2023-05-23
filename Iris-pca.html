@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; My sample book</title>
+    <title>Implementasi Iris Menggunakan Model PCA &#8212; My sample book</title>
   
   
   
@@ -154,13 +154,15 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="menghitung-jarak.html">Menghitung jarak</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Iris-NaiveBayes.html">Implementasi Naive Bayes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Uts-pendat.html">Naive bayes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Iris-pohonkeputusan.html">Pohon Keputusan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Implementasi Iris Menggunakan Model PCA</a></li>
+
 </ul>
 
     </div>
@@ -344,7 +346,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Implementasi Iris Menggunakan Model PCA</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -353,7 +355,9 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Implementasi Iris Menggunakan Model PCA</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#with-pca">2. With PCA</a></li>
 </ul>
 
             </nav>
@@ -366,7 +370,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="cell docutils container">
+  <div class="section" id="implementasi-iris-menggunakan-model-pca">
+<h1>Implementasi Iris Menggunakan Model PCA<a class="headerlink" href="#implementasi-iris-menggunakan-model-pca" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># linear algebra</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1"># data processing, CSV file I/O (e.g. pd.read_csv)</span>
@@ -420,7 +426,7 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-87578e3d-92fa-4163-aff0-50a13c765d04">
+  <div id="df-9ae25550-807f-4563-b66e-b5ccbdc2618e">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -506,7 +512,7 @@ memory usage: 6.0+ KB
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-87578e3d-92fa-4163-aff0-50a13c765d04')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-9ae25550-807f-4563-b66e-b5ccbdc2618e')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -557,12 +563,12 @@ memory usage: 6.0+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-87578e3d-92fa-4163-aff0-50a13c765d04 button.colab-df-convert');
+          document.querySelector('#df-9ae25550-807f-4563-b66e-b5ccbdc2618e button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-87578e3d-92fa-4163-aff0-50a13c765d04');
+          const element = document.querySelector('#df-9ae25550-807f-4563-b66e-b5ccbdc2618e');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -591,7 +597,7 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ebe9fbe7-b474-490e-9a07-0947772d481f">
+  <div id="df-ac287a95-2f27-4f9d-9020-473d38e913f4">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -711,7 +717,7 @@ memory usage: 6.0+ KB
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-ebe9fbe7-b474-490e-9a07-0947772d481f')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ac287a95-2f27-4f9d-9020-473d38e913f4')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -762,12 +768,12 @@ memory usage: 6.0+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-ebe9fbe7-b474-490e-9a07-0947772d481f button.colab-df-convert');
+          document.querySelector('#df-ac287a95-2f27-4f9d-9020-473d38e913f4 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-ebe9fbe7-b474-490e-9a07-0947772d481f');
+          const element = document.querySelector('#df-ac287a95-2f27-4f9d-9020-473d38e913f4');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -797,7 +803,7 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-44d89a29-fc9f-49d0-8d5f-d42c8c6eda08">
+  <div id="df-1ba51082-4180-4178-89e8-fbfa23fa2f31">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -905,7 +911,7 @@ memory usage: 6.0+ KB
 </table>
 <p>150 rows × 4 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-44d89a29-fc9f-49d0-8d5f-d42c8c6eda08')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-1ba51082-4180-4178-89e8-fbfa23fa2f31')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -956,12 +962,12 @@ memory usage: 6.0+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-44d89a29-fc9f-49d0-8d5f-d42c8c6eda08 button.colab-df-convert');
+          document.querySelector('#df-1ba51082-4180-4178-89e8-fbfa23fa2f31 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-44d89a29-fc9f-49d0-8d5f-d42c8c6eda08');
+          const element = document.querySelector('#df-1ba51082-4180-4178-89e8-fbfa23fa2f31');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1077,9 +1083,9 @@ Test score before PCA 0.9777777777777777 %
 </div>
 </div>
 </div>
-<ol class="arabic simple" start="2">
-<li><p>With PCA</p></li>
-</ol>
+</div>
+<div class="section" id="with-pca">
+<h1>2. With PCA<a class="headerlink" href="#with-pca" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
@@ -1197,6 +1203,7 @@ Test score after PCA 0.9777777777777777 %
 <img alt="_images/e066e7d6f552db6dedaeede77200d4a70ada8e013fb74567314ea8ce03b4ee9b.png" src="_images/e066e7d6f552db6dedaeede77200d4a70ada8e013fb74567314ea8ce03b4ee9b.png" />
 </div>
 </div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1255,7 +1262,9 @@ Test score after PCA 0.9777777777777777 %
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Implementasi Iris Menggunakan Model PCA</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#with-pca">2. With PCA</a></li>
 </ul>
 
   </nav></div>
