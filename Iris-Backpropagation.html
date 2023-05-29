@@ -158,6 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="menghitung-jarak.html">Menghitung jarak</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Iris-KNN.html">Implementasi KNN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Iris-NaiveBayes.html">Implementasi Naive Bayes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Uts-pendat.html">Naive bayes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Iris-pohonkeputusan.html">Pohon Keputusan</a></li>
@@ -397,7 +398,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-fad92a52-7038-426f-aa81-494443edae56">
+  <div id="df-05d343e7-0a25-4a44-b4c0-17fd80c63d5f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -426,44 +427,44 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>9</th>
-      <td>4.9</td>
-      <td>3.1</td>
+      <th>19</th>
+      <td>5.1</td>
+      <td>3.8</td>
       <td>1.5</td>
-      <td>0.1</td>
+      <td>0.3</td>
       <td>Iris-setosa</td>
     </tr>
     <tr>
-      <th>36</th>
-      <td>5.5</td>
-      <td>3.5</td>
-      <td>1.3</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>58</th>
-      <td>6.6</td>
-      <td>2.9</td>
-      <td>4.6</td>
-      <td>1.3</td>
-      <td>Iris-versicolor</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>4.9</td>
-      <td>3.0</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>94</th>
-      <td>5.6</td>
+      <th>82</th>
+      <td>5.8</td>
       <td>2.7</td>
-      <td>4.2</td>
-      <td>1.3</td>
+      <td>3.9</td>
+      <td>1.2</td>
       <td>Iris-versicolor</td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td>4.9</td>
+      <td>2.5</td>
+      <td>4.5</td>
+      <td>1.7</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>7.4</td>
+      <td>2.8</td>
+      <td>6.1</td>
+      <td>1.9</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>144</th>
+      <td>6.7</td>
+      <td>3.3</td>
+      <td>5.7</td>
+      <td>2.5</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>...</th>
@@ -474,19 +475,27 @@ document.write(`
       <td>...</td>
     </tr>
     <tr>
-      <th>49</th>
+      <th>77</th>
+      <td>6.7</td>
+      <td>3.0</td>
       <td>5.0</td>
-      <td>3.3</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
+      <td>1.7</td>
+      <td>Iris-versicolor</td>
     </tr>
     <tr>
-      <th>134</th>
-      <td>6.1</td>
-      <td>2.6</td>
-      <td>5.6</td>
-      <td>1.4</td>
+      <th>131</th>
+      <td>7.9</td>
+      <td>3.8</td>
+      <td>6.4</td>
+      <td>2.0</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>6.5</td>
+      <td>3.0</td>
+      <td>5.2</td>
+      <td>2.0</td>
       <td>Iris-virginica</td>
     </tr>
     <tr>
@@ -498,26 +507,18 @@ document.write(`
       <td>Iris-versicolor</td>
     </tr>
     <tr>
-      <th>84</th>
-      <td>5.4</td>
-      <td>3.0</td>
-      <td>4.5</td>
-      <td>1.5</td>
-      <td>Iris-versicolor</td>
-    </tr>
-    <tr>
-      <th>122</th>
-      <td>7.7</td>
-      <td>2.8</td>
-      <td>6.7</td>
-      <td>2.0</td>
-      <td>Iris-virginica</td>
+      <th>35</th>
+      <td>5.0</td>
+      <td>3.2</td>
+      <td>1.2</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
     </tr>
   </tbody>
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-fad92a52-7038-426f-aa81-494443edae56')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-05d343e7-0a25-4a44-b4c0-17fd80c63d5f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -568,12 +569,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-fad92a52-7038-426f-aa81-494443edae56 button.colab-df-convert');
+          document.querySelector('#df-05d343e7-0a25-4a44-b4c0-17fd80c63d5f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-fad92a52-7038-426f-aa81-494443edae56');
+          const element = document.querySelector('#df-05d343e7-0a25-4a44-b4c0-17fd80c63d5f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -668,7 +669,7 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-dad5de90-9906-45de-b1c2-85f4789e115f">
+  <div id="df-a0d54dab-8e50-494e-ab8b-3c5c06658f28">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -776,7 +777,7 @@ memory usage: 6.0+ KB
 </table>
 <p>150 rows × 4 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-dad5de90-9906-45de-b1c2-85f4789e115f')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-a0d54dab-8e50-494e-ab8b-3c5c06658f28')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -827,12 +828,12 @@ memory usage: 6.0+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-dad5de90-9906-45de-b1c2-85f4789e115f button.colab-df-convert');
+          document.querySelector('#df-a0d54dab-8e50-494e-ab8b-3c5c06658f28 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-dad5de90-9906-45de-b1c2-85f4789e115f');
+          const element = document.querySelector('#df-a0d54dab-8e50-494e-ab8b-3c5c06658f28');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});

@@ -63,6 +63,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Iris-KNN';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Implementasi Naive Bayes" href="Iris-NaiveBayes.html" />
+    <link rel="prev" title="Menghitung jarak" href="menghitung-jarak.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -153,9 +155,10 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="menghitung-jarak.html">Menghitung jarak</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Implementasi KNN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Iris-NaiveBayes.html">Implementasi Naive Bayes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Uts-pendat.html">Naive bayes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Iris-pohonkeputusan.html">Pohon Keputusan</a></li>
@@ -371,7 +374,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;contextlib.ExitStack at 0x7f840a96e7a0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;contextlib.ExitStack at 0x7f3185916770&gt;
 </pre></div>
 </div>
 </div>
@@ -392,7 +395,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-686841ee-0173-400f-a94b-2413f8590352">
+  <div id="df-7c7a51f0-393c-43fd-99c8-fe51d059602e">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -512,7 +515,7 @@ document.write(`
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-686841ee-0173-400f-a94b-2413f8590352')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7c7a51f0-393c-43fd-99c8-fe51d059602e')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -563,12 +566,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-686841ee-0173-400f-a94b-2413f8590352 button.colab-df-convert');
+          document.querySelector('#df-7c7a51f0-393c-43fd-99c8-fe51d059602e button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-686841ee-0173-400f-a94b-2413f8590352');
+          const element = document.querySelector('#df-7c7a51f0-393c-43fd-99c8-fe51d059602e');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -613,7 +616,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-edbd292c-b8e9-4d5c-850a-d41813ca2fa8">
+  <div id="df-bec1050f-4bf4-437c-b7e9-1548902e8942">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -678,7 +681,7 @@ document.write(`
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-edbd292c-b8e9-4d5c-850a-d41813ca2fa8')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-bec1050f-4bf4-437c-b7e9-1548902e8942')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -729,12 +732,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-edbd292c-b8e9-4d5c-850a-d41813ca2fa8 button.colab-df-convert');
+          document.querySelector('#df-bec1050f-4bf4-437c-b7e9-1548902e8942 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-edbd292c-b8e9-4d5c-850a-d41813ca2fa8');
+          const element = document.querySelector('#df-bec1050f-4bf4-437c-b7e9-1548902e8942');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -867,6 +870,24 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="menghitung-jarak.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Menghitung jarak</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Iris-NaiveBayes.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Implementasi Naive Bayes</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
