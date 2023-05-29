@@ -63,7 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Iris-pca';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
+    <link rel="prev" title="Iris Backpropagation" href="Iris-Backpropagation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -161,6 +161,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Uts-pendat.html">Naive bayes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Iris-pohonkeputusan.html">Pohon Keputusan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Iris-Backpropagation.html">Iris Backpropagation</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Implementasi Iris Menggunakan Model PCA</a></li>
 
 </ul>
@@ -426,7 +427,7 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f5c91bd9-2bf2-448f-9ccc-6d0ac80fb30f">
+  <div id="df-4c7cc772-1772-4d28-99bb-8179c73d0895">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -512,7 +513,7 @@ memory usage: 6.0+ KB
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f5c91bd9-2bf2-448f-9ccc-6d0ac80fb30f')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-4c7cc772-1772-4d28-99bb-8179c73d0895')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -563,12 +564,12 @@ memory usage: 6.0+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f5c91bd9-2bf2-448f-9ccc-6d0ac80fb30f button.colab-df-convert');
+          document.querySelector('#df-4c7cc772-1772-4d28-99bb-8179c73d0895 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f5c91bd9-2bf2-448f-9ccc-6d0ac80fb30f');
+          const element = document.querySelector('#df-4c7cc772-1772-4d28-99bb-8179c73d0895');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -597,7 +598,7 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-357871b0-31a9-4d02-be29-8e4ab3090b05">
+  <div id="df-f835d16c-ebeb-4fb9-9a1a-6370b25fbbdf">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -717,7 +718,7 @@ memory usage: 6.0+ KB
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-357871b0-31a9-4d02-be29-8e4ab3090b05')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f835d16c-ebeb-4fb9-9a1a-6370b25fbbdf')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -768,12 +769,12 @@ memory usage: 6.0+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-357871b0-31a9-4d02-be29-8e4ab3090b05 button.colab-df-convert');
+          document.querySelector('#df-f835d16c-ebeb-4fb9-9a1a-6370b25fbbdf button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-357871b0-31a9-4d02-be29-8e4ab3090b05');
+          const element = document.querySelector('#df-f835d16c-ebeb-4fb9-9a1a-6370b25fbbdf');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -803,7 +804,7 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-97893c79-fb79-4931-b464-8ace11bc9ff7">
+  <div id="df-9a3c7049-dc25-458f-9dc3-1bc5c3c73d09">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -911,7 +912,7 @@ memory usage: 6.0+ KB
 </table>
 <p>150 rows × 4 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-97893c79-fb79-4931-b464-8ace11bc9ff7')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-9a3c7049-dc25-458f-9dc3-1bc5c3c73d09')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -962,12 +963,12 @@ memory usage: 6.0+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-97893c79-fb79-4931-b464-8ace11bc9ff7 button.colab-df-convert');
+          document.querySelector('#df-9a3c7049-dc25-458f-9dc3-1bc5c3c73d09 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-97893c79-fb79-4931-b464-8ace11bc9ff7');
+          const element = document.querySelector('#df-9a3c7049-dc25-458f-9dc3-1bc5c3c73d09');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1237,12 +1238,12 @@ Test score after PCA 0.9777777777777777 %
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="markdown-notebooks.html"
+       href="Iris-Backpropagation.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+        <p class="prev-next-title">Iris Backpropagation</p>
       </div>
     </a>
 </div></div>
